@@ -81,7 +81,7 @@ class MyFrame(wx.Frame):
         # self.timenow = time.ctime()[11:19]
         self.time2 = datetime.datetime.now()
         self.timenow = self.subtime(self.time1,self.time2)
-        self.timenow = "{}:{}:{} ".format(int(self.timenow.seconds/(60*60)),int(self.timenow.seconds/(60)),int(self.timenow.seconds%60))
+        self.timenow = "{}:{}:{} ".format(int(self.timenow.seconds/3600)%(24),int(self.timenow.seconds/60)%(60),int(self.timenow.seconds)%(60))
         self.timetmp.SetLabel(self.timenow)
         
         pass
